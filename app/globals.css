@@ -7,14 +7,18 @@
   --color-primary-strong: #0830d6;
   --color-primary-soft: #9bb8ff;
   --color-foreground: #ffffff;
-  --color-bg: #0d0d0d;
+  --color-bg: radial-gradient(circle at 50% 30%, #0a1b4f 0%, #020817 70%, #01040d 100%);
   --color-surface: #111214;
   --color-muted: #8b8b95;
+  --surface-1: #111214;
+  --surface-2: #18191b;
+  --surface-3: #1f2023;
 
   /* ===== TYPOGRAPHY ===== */
   --font-size-base: 16px;
-  --font-h1: 48px;
-  --font-h2: 32px;
+  --font-h1: 56px;
+  --font-h2: 36px;
+  --font-h3: 28px;
   --font-body: 18px;
   --font-small: 14px;
 
@@ -25,6 +29,8 @@
   --s-lg: 24px;
   --s-xl: 32px;
   --s-2xl: 48px;
+  --s-3xl: 64px;
+  --s-4xl: 96px;
 
   /* ===== RADIUS ===== */
   --r-sm: 4px;
@@ -34,12 +40,14 @@
   /* ===== SHADOWS ===== */
   --shadow-soft: 0 6px 18px rgba(0,0,0,0.35);
   --shadow-subtle: 0 4px 12px rgba(0,0,0,0.25);
+  --shadow-hard: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 html { 
   scroll-behavior: smooth; 
   scroll-padding-top: 96px; 
 }
+
 body {
   font-size: var(--font-size-base);
   background: var(--color-bg);
@@ -48,5 +56,8 @@ body {
   -moz-osx-font-smoothing:grayscale;
 }
 
+
 .text-muted { color: var(--color-muted); }
 .bg-surface { background: var(--color-surface); }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
